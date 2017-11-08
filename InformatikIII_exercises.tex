@@ -176,6 +176,122 @@ Geben Sie Typ-2-Grammatiken für folgende Sprachen an: \\
 
 \section{Übung 02}
 
+\textit{{\bf Hinweis:} Geben Sie bei Grammatiken und Automaten immer das zugehörige Tupel an! Lösungen ohne Lösungsweg werden nicht akzeptiert!} \\
+
+%---------------------------------------------------
+
+\subsection{Typ-2- und Typ-3-Grammatiken}
+
+Geben Sie für folgende Sprachen jeweils eine Typ-3-Grammatik und eine Typ-2-Grammatik, die keine Typ-3-Grammatik ist, an. \\
+
+ $L_1 = \{101010\} \subseteq \{0,1\}^*$ \\
+ 
+$L_2 = \{w \in \{a,b\}^* \mid \#_a(w) \equiv 0 \pmod 3\} \subseteq \{a, b\}^*$ \\
+
+%---------------------------------------------------
+
+\subsection{Grammatik}
+
+Sei $\Sigma=\{a,b,c\}$. 
+Geben Sie für folgende Sprachen jeweils eine Grammatik an, die diese Sprache erzeugt. 
+Geben Sie dabei den Regeln/Zuständen sinnvolle Namen bzw.\ erläutern Sie Ihre Konstruktion im Detail. \\
+
+a) Alle Wörter, die maximal 3 $c$'s enthalten. \\
+
+b) Alle Wörter mit L"ange $\geq 3$. \\
+
+c) Alle Wörter mit  Wortl"ange kongruent 1 modulo 3. \\
+ 
+%---------------------------------------------------
+
+\subsection{endliche Automaten}
+
+Geben Sie für jede Sprache aus Aufgabe 2 jeweils einen endlichen Automat an, der die Sprache erkennt.
+Geben Sie dabei den Zuständen sinnvolle Namen bzw.\ erläutern Sie Ihre Konstruktion im Detail.
+
+%---------------------------------------------------
+
+\subsection{Grammatik}
+
+Betrachten Sie folgende Grammatik: \\
+
+$G=(\{S,A\},\{0,1\},P,S)$, wobei $P= \{S\rightarrow AA, A \rightarrow AA, A \rightarrow 1\}$. \\
+
+a)  Geben Sie für $w=111111$ zwei verschiedene Ableitungen mit gleichem Ableitungsbaum an (geben Sie diesen auch an). Markieren Sie hierbei in jedem Schritt, welches Nonterminal gerade abgeleitet wird. \\
+
+b) Geben Sie zwei verschiedene Ableitungsbäume für $w$ an. \\
+
+%---------------------------------------------------
+
+\subsection{Automat}
+
+In dieser Aufgabe sollen Sie formal beweisen, dass ein gegebener Automat bzw. eine gegebene Grammatik die selbe Sprache beschreiben. Dazu sei der folgende Automat gegeben:
+\begin{align*}
+M = (\{q_0, q_1, q_2, q_3\}, \{a, b\}, \delta, q_0, \{q_0, q_3\})
+\end{align*}
+wobei $\delta$ durch folgendes Schaubild dargestellt wird:
+\begin{center} %erstellt mit http://madebyevan.com/fsm/
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (10.5,-13.6) circle (3);
+\draw (10.5,-13.6) node {$q_0$};
+\draw [black] (10.5,-13.6) circle (2.4);
+\draw [black] (26.5,-13.6) circle (3);
+\draw (26.5,-13.6) node {$q_1$};
+\draw [black] (10.5,-25.9) circle (3);
+\draw (10.5,-25.9) node {$q_2$};
+\draw [black] (26.5,-25.9) circle (3);
+\draw (26.5,-25.9) node {$q_3$};
+\draw [black] (26.5,-25.9) circle (2.4);
+\draw [black] (5.1,-13.6) -- (7.5,-13.6);
+\fill [black] (7.5,-13.6) -- (6.7,-13.1) -- (6.7,-14.1);
+\draw [black] (9.103,-23.257) arc (-160.37977:-199.62023:10.443);
+\fill [black] (9.1,-23.26) -- (9.31,-22.34) -- (8.36,-22.67);
+\draw (8,-19.75) node [left] {$b$};
+\draw [black] (11.644,-16.366) arc (15.62592:-15.62592:12.564);
+\fill [black] (11.64,-16.37) -- (11.38,-17.27) -- (12.34,-17);
+\draw (12.61,-19.75) node [right] {$b$};
+\draw [black] (23.72,-27.017) arc (-72.94044:-107.05956:17.792);
+\fill [black] (23.72,-27.02) -- (22.81,-26.77) -- (23.1,-27.73);
+\draw (18.5,-28.3) node [below] {$a$};
+\draw [black] (13.323,-24.893) arc (105.25681:74.74319:19.674);
+\fill [black] (13.32,-24.89) -- (14.23,-25.17) -- (13.96,-24.2);
+\draw (18.5,-23.7) node [above] {$a$};
+\draw [black] (27.64,-16.367) arc (15.56999:-15.56999:12.602);
+\fill [black] (27.64,-16.37) -- (27.37,-17.27) -- (28.34,-17);
+\draw (28.6,-19.75) node [right] {$b$};
+\draw [black] (25.361,-23.132) arc (-164.44592:-195.55408:12.613);
+\fill [black] (25.36,-23.13) -- (25.63,-22.23) -- (24.66,-22.5);
+\draw (24.4,-19.75) node [left] {$b$};
+\draw [black] (23.634,-14.478) arc (-76.79443:-103.20557:22.472);
+\fill [black] (23.63,-14.48) -- (22.74,-14.17) -- (22.97,-15.15);
+\draw (18.5,-15.57) node [below] {$a$};
+\draw [black] (13.322,-12.59) arc (105.31427:74.68573:19.606);
+\fill [black] (13.32,-12.59) -- (14.23,-12.86) -- (13.96,-11.9);
+\draw (18.5,-11.39) node [above] {$a$};
+\end{tikzpicture}
+\end{center}
+Außerdem sei die folgende Grammatik gegeben: 
+\begin{align*}
+G = (\{V_0, V_1, V_2, V_3\}, \{a, b\}, P, V_0)
+\end{align*}
+wobei $P$ auch hier visuell dargestellt wird durch:
+\begin{align*}
+& V_0 \longrightarrow aV_1~|~bV_2~|~\varepsilon \\
+& V_1 \longrightarrow aV_0~|~bV_3 \\
+& V_2 \longrightarrow aV_3~|~bV_0 \\
+& V_3 \longrightarrow aV_2~|~bV_1~|~\varepsilon 
+\end{align*}
+\\
+
+a) Zeigen Sie per Induktion über die Länge von Worten, dass $M$ genau die Worte $w \in \{a, b\}^*$ akzeptiert, für die $\#_a(w) \equiv \#_b(w) \pmod 2$ gilt. \\\\
+\textit{{\bf Hinweis:} Starten Sie die Induktion bei der Wortlänge 0 und wählen Sie eine sinnvolle Induktionsvoraussetzung! Testen Sie dazu ein paar Beispielworte gerader und ungerader Länge darauf, in welchem Zustand der Lauf des Automaten endet.} \\
+
+b) Zeigen Sie per Induktion über die Länge von Ableitungen, dass $G$ genau die Worte $w \in \{a, b\}^*$ ableiten kann, für die $\#_a(w) \equiv \#_b(w) \pmod 2$ gilt. \\\\
+\textit{{\bf Hinweis:} Starten Sie die Induktion bei Ableitungen mit einem Ableitungsschritt und wählen sie eine sinnvolle Induktionsvoraussetzung! Stellen Sie dazu ein paar Ableitungen auf und überlegen Sie sich eine Vermutung, was nach einer gerade bzw. ungeraden Anzahl an Ableitungsschritten gilt. Es gibt eine Analogie zu der Induktionsvoraussetzung in a).} \\
+
+c) Erklären Sie kurz in Worten, inwiefern die Zustände bzw. Transitionen von $M$ den Nichtterminalen bzw. Produktionen in $G$ entsprechen. Unterscheiden Sie bei den Zuständen zwischen Startzuständen, Endzuständen und den restlichen Zuständen. \\
+
 %----------------------------------------------------------------------------------------
 
 \newpage
