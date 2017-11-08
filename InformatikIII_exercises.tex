@@ -101,10 +101,10 @@ c) Beweisen Sie: $\overline{L}$ ist unendlich. \\
 Im folgenden sei das Alphabet $\sum = \{ a,b \}$. Geben Sie für alle Kombinationen $L_{i}$, $L_{j}$ ein Wort aus $L_{i} \cap L_{j}$ an, falls $L_{i} \cap L_{j} \neq \emptyset$. Geben Sie außerdem für jeden Schritt an, ob er endlich oder unendlich ist. \\
 
 \begin{itemize}
-\item $L_{1}$ = { Alle Wörter mit mindestens 2 a's. } 
-\item $L_{2}$ = { Alle Wörter mit mindestens einem b.}
-\item $L_{3}$ = { Alle Wörter mit einer ungeraden Anzahl an a's.}
-\item $L_{4}$ = { Alle Wörter mit Länge höchstens 1}
+\item $L_{1}$ = \{ Alle Wörter mit mindestens 2 a's. \} 
+\item $L_{2}$ = \{ Alle Wörter mit mindestens einem b. \}
+\item $L_{3}$ = \{ Alle Wörter mit einer ungeraden Anzahl an a's. \}
+\item $L_{4}$ = \{ Alle Wörter mit Länge höchstens 1 \}
 \end{itemize} 
 \\
 
@@ -125,6 +125,50 @@ c) Gebe Sie an, wie viele Typ-0-Grammatiken es gibt, die Sprachen erzeugen, welc
 \newpage
 
 \section{PÜ 01}
+
+%---------------------------------------------------
+
+\subsection{Typ-3-Grammatiken}
+
+Geben Sie Typ-3-Grammatiken für folgende Sprachen an ($\sum = \{ a,b \}$): \\
+
+$L_{odd}$ = $\{ w \epsilon \sum *$ | $|w|$ ungerade \} \\
+
+$L_{even}$ = $\{ w \epsilon \sum *$ | $|w|$ gerade  \} \\
+
+$L_{ \leq 3}$ = $\{ w \epsilon \sum *$ | $|w| \leq 3 \} $ \\
+
+$L_{ \geq 3}$ = $\{ w \epsilon \sum *$ | $|w| \geq 3 \} $ \\
+
+$L_{ #(a)odd }$ = $\{ w \epsilon \sum *$ |  Die Anzahl der a's in w ist ungerade \} \\
+
+$L_{ #(a)even }$ = $\{ w \epsilon \sum *$ |  Die Anzahl der a's in w ist gerade \} \\
+
+$L_{1}$ = $\{ w \epsilon \sum *$ | $ #_{a}(w) \equiv 2 (mod 3)  \} $ \\
+
+$L_{2}$ = $\{ w \epsilon \sum *$ | $ #_{a}(w) \equiv #_{b}(w) (mod 3) \} $ \\
+
+$L_{3}$ = $\{ w \epsilon \sum *$ | $ #_{a}(w) < #_{b}(w) \leq 3  \} $ \\
+
+%---------------------------------------------------
+
+\subsection{Typ-2-Grammatiken}
+
+Geben Sie Typ-2-Grammatiken für folgende Sprachen an: \\
+
+1.) $ \sum = \{ a,b \}$, L = \{ $a^{n}b^{n}$ | $n \geq 0$ \} \\
+
+2.) $ \sum = \{ [, ] \}$ , L = \{ w  | w ist ein korrekt geklammerter Ausdruck \} \\
+
+3.) $ \sum = \{ [, ] , (, ) \}$, L = \{ w | w ist ein korrekt geklammerter Ausdruck \} \\
+
+4.) $ \sum = \{ a,b \}$, L = \{ $w \epsilon \sum *$  | $#_{a}(w) = #_{b}(w)$ \} \\
+
+5.) $ \sum = \{ a,b \}$, L = \{ $w \epsilon \sum *$ | $#_{a}(w) = 2 #_{b}(w)$ \} \\
+
+6.) $ \sum = \{ a,b \}$, L = \{ $w \epsilon \sum *$ | $#_{a}(w) > #_{b}(w)$ \} \\
+
+7.) $ \sum = \{ a,b \}$, L = \{ $ww^{R}$ | $w \epsilon \sum *$ \} \\
 
 %---------------------------------------------------------------------------------------
 
