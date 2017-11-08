@@ -326,6 +326,62 @@ Lasst die Leute folgende Automaten determinisieren. Achtet darauf, dass die Tupe
 
 \section{Übung 03}
 
+%---------------------------------------------------
+
+\subsection{DEA}
+
+Betrachten SIe den folgenden DEA: \\
+
+$A= ( \{ q_{0}, q_{1}, q_{2}, q_{3} \} , \{ a,b \} , \delta , q_{0}, \{ q_{0} , q_{2} \})$ \\
+
+wobei $\delta$ durch folgende Schaubild graphisch dargestellt sei: \\
+
+a) Konstruieren Sie ein Typ-3-Grammatik G, so dass $L(A) = L(G)$ gilt. Verwenden Sie dazu das Verfahren aus der Vorlesung (aus dem Beweis für den Satz aus Folie 47). Denken Sie daran den Automaten zuerst entsprechen zu modifizieren und geben Sie auch das Tupel von G an! \\
+
+b) Beschreiben Sie die Sprache $L(A)$ in einem Satz. \\
+
+%---------------------------------------------------
+
+\subsection{NEA}
+
+Sei $A = (Q, \{ a,b \}, \delta , Q_{0} , F)$ ein NEA (nicht-deterministischer endlicher Automat). Formel akzeptiert ein NEA ein Wort $w=a_{1}a_{2}...a_{n}$ genau dann, wenn eine Folge von Zuständen $q_{0}q_{1}...q_{n}$ existiert mit \\
+
+\begin{itemize}
+\item $q_{0} \epsilon Q_{0}$
+\item $q_{n} \epsilon F$
+\item $(q_{i}, a_{i+1}, q_{i+1}) \epsilon \delta$ für alle $0 \leq i < n$
+\end{itemize}  
+
+EIne solche Folge heißt akzeptierender Lauf von A auf w. \\
+
+a)Zeigen Sie: Wenn $Q_{0} = Q$, also alle Zustände auch Startzustände sind, und wenn $w \epsilon L(A)$, dann akzeptiert A auch jedes Suffix von w. \\
+
+b) Zeigen Sie: Es existiert ein NEA A' mit $L(A') = \{ w^{R} | w \epsilon L(A) \}$, wobei $w^{R}$ das Wort w rückwärts gelesen ist. Geben Sie ihre Konstruktion an und beweisen Sie die Korrektheit mit obiger Definition von Akzeptanz. \\
+
+%---------------------------------------------------
+
+\subsection{Automaten}
+
+1.) Sei $\sum = \{ a,b \}$. Geben Sie für $L = \{ w \epsilon \{ a,b \} * $ | das zweitletzte Zeichen von w ist a \} einen DEA (deterministischer endlicher Automat) und einen NEA, der kein DEA ist, an. \\
+
+2.) Die Definition, wann eine DEA ein Wort akzeptiert, ist analog zu der Definition aus Aufgabe 2. Erklären Sie in eigenen Worten wo dennoch Unterschiede liegen. Wie viele akzeptierende Läufe besitzt ein DEA für ein gegebenes Wort höchstens? Wie viele akzeptierende Läufe muss ein NEA für ein Wort besitzen, damit er es akzeptiert? \\
+
+3.) Betrachten Sie die endlichen Automaten, deren Übergangsrelationen in den Abbildungen graphisch dargestellt sind. Geben Sie für jeden Automaten an, ob es sich um einen DEA und/oder einen NEA handelt. Begründen Sie jeweils ihre Entscheidung. \\
+
+%---------------------------------------------------
+
+\subsection{nichtdeterministische Automaten}
+
+a) Im folgenden seien vier nichtdeterministische  Automaten graphisch dargestellt: \\
+
+Konstruieren Sie, mit dem Verfahren aus der Vorlesung jeweils einen deterministischen Automaten, der die selbe Sprache akzeptiert. Verwenden Sie dazu jeweils eine Tabelle. \\
+
+Die Tabelle beschreibt am Ende des Verfahrens die Übergangsfunktion des deterministischen Automaten. Unterstreichen Sie die Endzustände in der Tabelle. Zeichnen Sie außerdem jeweils die Übergangsrelation des entstehenden Automaten und geben Sie das Tupel an. \\
+
+b) Es kann vorkommen, dass eine Zelle in der Tabelle leer bleibt, weil kein Zustand erreichbar ist für eine Kombination aus einer Menge von Zuständen des ursprünglichen Automaten und eines Eingabezeichens. Welchem Zustand der Potenzmengenkonstruktion entsprechen diese Zellen? \\
+
+c) Wie viele Zustände hat ein so konstruierter Automat höchstens, wenn der ursprüngliche Automat n Zustände hatte? Begründen Sie mit höchstens zwei Sätzen! \\
+
 %----------------------------------------------------------------------------------------
 
 \newpage
